@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190329075152) do
+ActiveRecord::Schema.define(version: 20190405105847) do
 
   create_table "todos", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "name_of_todo"
+    t.text "description_of_todo"
+    t.string "entry_date"
+    t.string "due_date"
+    t.string "status"
   end
 
 end

@@ -6,15 +6,19 @@
 
 <table border = "1">
   <tr>
-    <th>ID</th>
+    <th>ENTRY DATE</th>
     <th>NAME</th>
     <th>DESCRIPTION</th>
+     <th>DUE DATE</th>
+    <th>STATUS</th>
   </tr>
   <% @todos.each do |todo| %>
   <tr>
-    <td><%= todo.id %></td>
-    <td><%= todo.name %></td>
-    <td><%= todo.description %></td>
+    <td><%= todo.entry_date %></td>
+    <td><%= todo.name_of_todo %></td>
+    <td><%= todo.description_of_todo %></td>
+    <td><%= todo.due_date %></td>
+    <td><%= todo.status %></td>
     <td><%= link_to "Edit", edit_todo_path(todo) %></td>
     <td><%= link_to "Show", todo_path(todo) %></td>
     <td><%= link_to "Delete", todo_path(todo), method: :delete, data: {confirm: "Are you sure you want to delete this item"} %></td>

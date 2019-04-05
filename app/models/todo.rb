@@ -1,4 +1,4 @@
 class Todo < ApplicationRecord
-  validates :name, presence: true
-  validates :description, presence: true
+  validates :name_of_todo, presence: true
+  validates :description_of_todo, presence: true
 end
