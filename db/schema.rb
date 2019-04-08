@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190405105847) do
+ActiveRecord::Schema.define(version: 20190408120423) do
 
   create_table "todos", force: :cascade do |t|
     t.string "name_of_todo"
@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 20190405105847) do
     t.string "entry_date"
     t.string "due_date"
     t.string "status"
+    t.integer "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
   end
 
 end
